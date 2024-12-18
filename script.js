@@ -1,12 +1,3 @@
-import vkBridge from './node_modules/@vkontakte/vk-bridge';
-console.log(typeof vkBridge); // Ожидается "object"
-
-console.log('VKWebAppInit is being called...');
-vkBridge.send('VKWebAppInit')
-  .then(() => console.log('VKWebAppInit successfully initialized!'))
-  .catch((error) => console.error('Error initializing VKWebAppInit:', error));
-
-
 const cartLink = document.getElementById("cart-link");
 
 cartLink.addEventListener("click", function (event) {

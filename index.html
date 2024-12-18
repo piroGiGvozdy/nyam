@@ -12,9 +12,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Tinos:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./style.css">
 
     <title>Dimka's Nyamkas</title>
+
+    <script src="https://unpkg.com/@vkontakte/vk-bridge"></script>
 </head>
 <body>
     
@@ -1089,7 +1091,12 @@
     </div>
     <!-- END OF ORDER --> 
 
-    <script type="module" src="/script.js"></script>
+    <script>
+        vkBridge.send('VKWebAppInit')
+          .then(() => console.log('VK Bridge initialized'))
+          .catch((error) => console.error('VK Bridge initialization failed:', error));
+    </script>
+    <script src="./script.js" defer></script>
 
 </body>
 </html>
