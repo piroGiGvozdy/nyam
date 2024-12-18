@@ -1,3 +1,11 @@
+import bridge from '@vkontakte/vk-bridge';
+
+bridge.send('VKWebAppInit');
+
+bridge.send('VKWebAppGetUserInfo').then((userInfo) => {
+  console.log(userInfo); // Информация о пользователе
+});
+
 const cartLink = document.getElementById("cart-link");
 
 cartLink.addEventListener("click", function (event) {
@@ -253,12 +261,6 @@ function clearCart() {
         }
     });
 }
-
-vkBridge.send('VKWebAppInit');
-
-vkBridge.send('VKWebAppGetUserInfo').then((user) => {
-  console.log(user);
-});
 
 
 
