@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   version="1.1"
+   id="svg1"
+   width="176"
+   height="68"
+   viewBox="0 0 176 68"
+   sodipodi:docname="logo.svg"
+   inkscape:version="1.3.1 (9b9bdc1480, 2023-11-25, custom)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs1">
+    <rect
+       x="74.702967"
+       y="16.804021"
+       width="47.129647"
+       height="42.003739"
+       id="rect3" />
+  </defs>
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="6.2907602"
+     inkscape:cx="88.781003"
+     inkscape:cy="44.35076"
+     inkscape:window-width="1920"
+     inkscape:window-height="1011"
+     inkscape:window-x="0"
+     inkscape:window-y="32"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <g
+     inkscape:groupmode="layer"
+     id="layer1"
+     inkscape:label="new"
+     style="display:inline"
+     transform="matrix(0.80095546,0,0,0.75211536,23.390981,6.7748584)">
+    <circle
+       style="display:inline;opacity:1;fill:#ff8a00;fill-opacity:1"
+       id="path2"
+       cx="34.011288"
+       cy="34.096626"
+       r="33.904373" />
+    <text
+       xml:space="preserve"
+       id="text3"
+       style="font-size:29.3333px;white-space:pre;shape-inside:url(#rect3);display:inline;fill:#ffffff;fill-opacity:1"
+       transform="translate(-50.224047,1.5884662)"><tspan
+         x="74.703125"
+         y="42.757783"
+         id="tspan1">D</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:24.0503px;display:inline;fill:#463622;fill-opacity:0.988235"
+       x="86.168671"
+       y="42.988369"
+       id="text4"><tspan
+         sodipodi:role="line"
+         id="tspan4"
+         x="86.168671"
+         y="42.988369"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:24.0503px;font-family:sans-serif;-inkscape-font-specification:sans-serif;fill:#463622;fill-opacity:0.988235">Dimka<tspan
+   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:24.0503px;font-family:sans-serif;-inkscape-font-specification:sans-serif;fill:#ff8a00;fill-opacity:0.988235"
+   id="tspan5">'s</tspan></tspan></text>
+  </g>
+</svg>

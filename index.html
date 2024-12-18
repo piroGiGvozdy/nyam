@@ -1,0 +1,1094 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tinos:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+
+    <title>Dimka's Nyamkas</title>
+</head>
+<body>
+    <!-- HEADER -->
+        <header>
+
+            <div class="container">
+
+                <div class="header-content">
+
+                    <img class="header-content_logo" src="assets/logos/logo.svg" alt="">
+
+                    <div class="header-buttons">
+                        <nav>
+                            <a href="#" class="header-button" onclick="showPage(this, 'home')">Главная</a>
+                            <a href="#" class="header-button" onclick="showPage(this, 'menu')">Меню</a>
+                            <!-- <a href="#" class="header-button" onclick="showPage(this, 'contact')">О нас</a> -->
+                        </nav>
+                    </div>
+
+                    <div class="header-content_last">
+
+                        <a href="#" class="icon" id="cart-link" onclick="showPage(this, 'order')">
+                            <img id="cart-icon" src="assets/logos/cart_empty.svg" alt="">
+                        </a>
+
+                        <a href="#" class="login-button">
+                            Log in
+                        </a>
+                    </div>
+                    
+                </div>
+
+            </div>
+
+        </header>
+    <!-- END OF HEADER -->
+
+    <!-- HOME PAGE -->
+        <div id="home" class="page active">
+            <div class="container">
+
+                <div class="main-content">
+
+                    <div>
+                        <div class="main-content_about">Restauran</div>
+
+                        <h1>Dimka's <br> Nyamkas</h1>
+
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sodales senectus dictum arcu sit tristique donec eget.</p>
+
+                        <div class="main-content_buttons">
+                            <a href="#" class="header-button" onclick="goToMenu()">
+                                Заказать
+                            </a>
+                        </div>                        
+                    </div>
+
+                    <div class="main-img">
+                        <img src="assets/logos/pasta_2.svg" alt="">
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    <!-- END OF HOME PAGE -->
+
+    <!-- MENU -->
+        <div id="menu" class="page">
+
+            <div class="container">
+
+                <h2>Наше меню</h2>
+
+                <div class="menu-buttons">
+                    <a href="#" data-category="breakfast" class="active" onclick="showCategory('breakfast')">Завтрак</a>
+                    <a href="#" data-category="lunch" onclick="showCategory('lunch')">Обед</a>
+                    <a href="#" data-category="dinner" onclick="showCategory('dinner')">Ужин</a>
+                    <a href="#" data-category="fastfood" onclick="showCategory('fastfood')">Перекус</a>
+                    <a href="#" data-category="drinks" onclick="showCategory('drinks')">Напитки</a>
+                </div>
+
+                <!-- BREAKFAST -->
+
+                <div id="breakfast" class="category active">
+
+                    <div class="menu-item" data-item="Тост с яйцом" data-price="200">
+                        <img src="assets/menu/breakfast/tost.svg" alt="Тост с яйцом">
+                        <h3>Тост с яйцом</h3>
+
+                        <div class="menu-item_rating">
+                            <img src="assets/logos/Star_1.svg" alt="">
+                            <img src="assets/logos/Star_1.svg" alt="">
+                            <img src="assets/logos/Star_1.svg" alt="">
+                            <img src="assets/logos/Star_1.svg" alt="">
+                            <img src="assets/logos/Star_1.svg" alt="">
+                        </div>
+
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sodales senectus dictum arcu sit tristique donec eget.</p>
+
+                        <div class="menu-item_last">
+
+                            <h4 class="menu-item_last_price">200 ₽</h4>
+
+                            <div class="controls">
+                                <button class="add-btn" onclick="addItem(this, 'Тост с яйцом', 200, 'assets/menu/breakfast/tost.svg')">Добавить</button>
+                                <div class="counter" style="display: none;">
+                                    <button onclick="decrementItem(this, 'Тост с яйцом', 200, 'assets/menu/breakfast/tost.svg')">–</button>
+                                    <span>0</span>
+                                    <button onclick="incrementItem(this, 'Тост с яйцом', 200, 'assets/menu/breakfast/tost.svg')">+</button>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="menu-item" data-item="Омлет с грибами" data-price="200">
+                        <img src="assets/menu/breakfast/omlet.svg" alt="Омлет с грибами">
+                        <h3>Омлет с грибами</h3>
+
+                        <div class="menu-item_rating">
+                            <img src="assets/logos/Star_1.svg" alt="">
+                            <img src="assets/logos/Star_1.svg" alt="">
+                            <img src="assets/logos/Star_1.svg" alt="">
+                            <img src="assets/logos/Star_1.svg" alt="">
+                            <img src="assets/logos/Star_1.svg" alt="">
+                        </div>
+
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sodales senectus dictum arcu sit tristique donec eget.</p>
+
+                        <div class="menu-item_last">
+
+                            <h4 class="menu-item_last_price">200 ₽</h4>
+
+                            <div class="controls">
+                                <button class="add-btn" onclick="addItem(this, 'Омлет с грибами', 200, 'assets/menu/breakfast/omlet.svg')">Добавить</button>
+                                <div class="counter" style="display: none;">
+                                    <button onclick="decrementItem(this, 'Омлет с грибами', 200, 'assets/menu/breakfast/omlet.svg')">–</button>
+                                    <span>0</span>
+                                    <button onclick="incrementItem(this, 'Омлет с грибами', 200, 'assets/menu/breakfast/omlet.svg')">+</button>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="menu-item" data-item="Блинчики" data-price="250">
+                        <img src="assets/menu/breakfast/bliny.svg" alt="Блинчики">
+                        <h3>Блинчики</h3>
+
+                        <div class="menu-item_rating">
+                            <img src="assets/logos/Star_1.svg" alt="">
+                            <img src="assets/logos/Star_1.svg" alt="">
+                            <img src="assets/logos/Star_1.svg" alt="">
+                            <img src="assets/logos/Star_1.svg" alt="">
+                            <img src="assets/logos/Star_1.svg" alt="">
+                        </div>
+
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sodales senectus dictum arcu sit tristique donec eget.</p>
+
+                        <div class="menu-item_last">
+
+                            <h4 class="menu-item_last_price">250 ₽</h4>
+
+                            <div class="controls">
+                                <button class="add-btn" onclick="addItem(this, 'Блинчики', 250, 'assets/menu/breakfast/bliny.svg')">Добавить</button>
+                                <div class="counter" style="display: none;">
+                                    <button onclick="decrementItem(this, 'Блинчики', 250, 'assets/menu/breakfast/bliny.svg')">–</button>
+                                    <span>0</span>
+                                    <button onclick="incrementItem(this, 'Блинчики', 250, 'assets/menu/breakfast/bliny.svg')">+</button>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="menu-item" data-item="Тост яйцо-бекон" data-price="250">
+                        <img src="assets/menu/breakfast/bacon.svg" alt="Тост яйцо-бекон">
+                        <h3>Тост яйцо-бекон</h3>
+
+                        <div class="menu-item_rating">
+                            <img src="assets/logos/Star_1.svg" alt="">
+                            <img src="assets/logos/Star_1.svg" alt="">
+                            <img src="assets/logos/Star_1.svg" alt="">
+                            <img src="assets/logos/Star_1.svg" alt="">
+                            <img src="assets/logos/Star_1.svg" alt="">
+                        </div>
+
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sodales senectus dictum arcu sit tristique donec eget.</p>
+
+                        <div class="menu-item_last">
+
+                            <h4 class="menu-item_last_price">250 ₽</h4>
+
+                            <div class="controls">
+                                <button class="add-btn" onclick="addItem(this, 'Тост яйцо-бекон', 250, 'assets/menu/breakfast/bacon.svg')">Добавить</button>
+                                <div class="counter" style="display: none;">
+                                    <button onclick="decrementItem(this, 'Тост яйцо-бекон', 250, 'assets/menu/breakfast/bacon.svg')">–</button>
+                                    <span>0</span>
+                                    <button onclick="incrementItem(this, 'Тост яйцо-бекон', 250, 'assets/menu/breakfast/bacon.svg')">+</button>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="menu-item" data-item="Салат из зелени" data-price="150">
+                        <img src="assets/menu/breakfast/salad.svg" alt="Салат из зелени">
+                        <h3>Салат из зелени</h3>
+
+                        <div class="menu-item_rating">
+                            <img src="assets/logos/Star_1.svg" alt="">
+                            <img src="assets/logos/Star_1.svg" alt="">
+                            <img src="assets/logos/Star_1.svg" alt="">
+                            <img src="assets/logos/Star_1.svg" alt="">
+                            <img src="assets/logos/Star_1.svg" alt="">
+                        </div>
+
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sodales senectus dictum arcu sit tristique donec eget.</p>
+
+                        <div class="menu-item_last">
+
+                            <h4 class="menu-item_last_price">150 ₽</h4>
+
+                            <div class="controls">
+                                <button class="add-btn" onclick="addItem(this, 'Салат из зелени', 150, 'assets/menu/breakfast/salad.svg')">Добавить</button>
+                                <div class="counter" style="display: none;">
+                                    <button onclick="decrementItem(this, 'Салат из зелени', 150, 'assets/menu/breakfast/salad.svg')">–</button>
+                                    <span>0</span>
+                                    <button onclick="incrementItem(this, 'Салат из зелени', 150, 'assets/menu/breakfast/salad.svg')">+</button>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="menu-item" data-item="Авокадо тост" data-price="250">
+                        <img src="assets/menu/breakfast/avocado.svg" alt="Авокадо тост">
+                        <h3>Авокадо тост</h3>
+
+                        <div class="menu-item_rating">
+                            <img src="assets/logos/Star_1.svg" alt="">
+                            <img src="assets/logos/Star_1.svg" alt="">
+                            <img src="assets/logos/Star_1.svg" alt="">
+                            <img src="assets/logos/Star_1.svg" alt="">
+                            <img src="assets/logos/Star_1.svg" alt="">
+                        </div>
+
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sodales senectus dictum arcu sit tristique donec eget.</p>
+
+                        <div class="menu-item_last">
+
+                            <h4 class="menu-item_last_price">250 ₽</h4>
+
+                            <div class="controls">
+                                <button class="add-btn" onclick="addItem(this, 'Авокадо тост', 250, 'assets/menu/breakfast/avocado.svg')">Добавить</button>
+                                <div class="counter" style="display: none;">
+                                    <button onclick="decrementItem(this, 'Авокадо тост', 250, 'assets/menu/breakfast/avocado.svg')">–</button>
+                                    <span>0</span>
+                                    <button onclick="incrementItem(this, 'Авокадо тост', 250, 'assets/menu/breakfast/avocado.svg')">+</button>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- END OF BREAKFAST -->
+
+                <!-- LUNCH -->
+
+                <div id="lunch" class="category">
+
+                    <div class="menu-item" data-item="Борщ" data-price="250">
+                        <img src="assets/menu/lunch/borscht.svg" alt="Борщ">
+                        <h3>Борщ</h3>
+
+                        <div class="menu-item_rating">
+                            <img src="assets/logos/Star_1.svg" alt="">
+                            <img src="assets/logos/Star_1.svg" alt="">
+                            <img src="assets/logos/Star_1.svg" alt="">
+                            <img src="assets/logos/Star_1.svg" alt="">
+                            <img src="assets/logos/Star_1.svg" alt="">
+                        </div>
+
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sodales senectus dictum arcu sit tristique donec eget.</p>
+
+                        <div class="menu-item_last">
+
+                            <h4 class="menu-item_last_price">250 ₽</h4>
+
+                            <div class="controls">
+                                <button class="add-btn" onclick="addItem(this, 'Борщ', 250, 'assets/menu/lunch/borscht.svg')">Добавить</button>
+                                <div class="counter" style="display: none;">
+                                    <button onclick="decrementItem(this, 'Борщ', 250, 'assets/menu/lunch/borscht.svg')">–</button>
+                                    <span>0</span>
+                                    <button onclick="incrementItem(this, 'Борщ', 250, 'assets/menu/lunch/borscht.svg')">+</button>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="menu-item" data-item="Финская уха" data-price="350">
+                        <img src="assets/menu/lunch/uha.svg" alt="Финская уха">
+                        <h3>Финская уха</h3>
+
+                        <div class="menu-item_rating">
+                            <img src="assets/logos/Star_1.svg" alt="">
+                            <img src="assets/logos/Star_1.svg" alt="">
+                            <img src="assets/logos/Star_1.svg" alt="">
+                            <img src="assets/logos/Star_1.svg" alt="">
+                            <img src="assets/logos/Star_1.svg" alt="">
+                        </div>
+
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sodales senectus dictum arcu sit tristique donec eget.</p>
+
+                        <div class="menu-item_last">
+
+                            <h4 class="menu-item_last_price">350 ₽</h4>
+
+                            <div class="controls">
+                                <button class="add-btn" onclick="addItem(this, 'Финская уха', 350, 'assets/menu/lunch/uha.svg')">Добавить</button>
+                                <div class="counter" style="display: none;">
+                                    <button onclick="decrementItem(this, 'Финская уха', 350, 'assets/menu/lunch/uha.svg')">–</button>
+                                    <span>0</span>
+                                    <button onclick="incrementItem(this, 'Финская уха', 350, 'assets/menu/lunch/uha.svg')">+</button>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="menu-item" data-item="Салат Цезарь" data-price="200">
+                        <img src="assets/menu/lunch/salad.svg" alt="Салат Цезарь">
+                        <h3>Салат Цезарь</h3>
+
+                        <div class="menu-item_rating">
+                            <img src="assets/logos/Star_1.svg" alt="">
+                            <img src="assets/logos/Star_1.svg" alt="">
+                            <img src="assets/logos/Star_1.svg" alt="">
+                            <img src="assets/logos/Star_1.svg" alt="">
+                            <img src="assets/logos/Star_1.svg" alt="">
+                        </div>
+
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sodales senectus dictum arcu sit tristique donec eget.</p>
+
+                        <div class="menu-item_last">
+
+                            <h4 class="menu-item_last_price">200 ₽</h4>
+
+                            <div class="controls">
+                                <button class="add-btn" onclick="addItem(this, 'Салат Цезарь', 200, 'assets/menu/lunch/salad.svg')">Добавить</button>
+                                <div class="counter" style="display: none;">
+                                    <button onclick="decrementItem(this, 'Салат Цезарь', 200, 'assets/menu/lunch/salad.svg')">–</button>
+                                    <span>0</span>
+                                    <button onclick="incrementItem(this, 'Салат Цезарь', 200, 'assets/menu/lunch/salad.svg')">+</button>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="menu-item" data-item="Пюре с котлеткой" data-price="250">
+                        <img src="assets/menu/lunch/potato.svg" alt="Пюре с котлеткой">
+                        <h3>Пюре с котлеткой</h3>
+
+                        <div class="menu-item_rating">
+                            <img src="assets/logos/Star_1.svg" alt="">
+                            <img src="assets/logos/Star_1.svg" alt="">
+                            <img src="assets/logos/Star_1.svg" alt="">
+                            <img src="assets/logos/Star_1.svg" alt="">
+                            <img src="assets/logos/Star_1.svg" alt="">
+                        </div>
+
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sodales senectus dictum arcu sit tristique donec eget.</p>
+
+                        <div class="menu-item_last">
+
+                            <h4 class="menu-item_last_price">250 ₽</h4>
+
+                            <div class="controls">
+                                <button class="add-btn" onclick="addItem(this, 'Пюре с котлеткой', 250, 'assets/menu/lunch/potato.svg')">Добавить</button>
+                                <div class="counter" style="display: none;">
+                                    <button onclick="decrementItem(this, 'Пюре с котлеткой', 250, 'assets/menu/lunch/potato.svg')">–</button>
+                                    <span>0</span>
+                                    <button onclick="incrementItem(this, 'Пюре с котлеткой', 250, 'assets/menu/lunch/potato.svg')">+</button>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="menu-item" data-item="Рис с сердцечками" data-price="300">
+                        <img src="assets/menu/lunch/rice.svg" alt="Рис с сердцечками">
+                        <h3>Рис с сердцечками</h3>
+
+                        <div class="menu-item_rating">
+                            <img src="assets/logos/Star_1.svg" alt="">
+                            <img src="assets/logos/Star_1.svg" alt="">
+                            <img src="assets/logos/Star_1.svg" alt="">
+                            <img src="assets/logos/Star_1.svg" alt="">
+                            <img src="assets/logos/Star_1.svg" alt="">
+                        </div>
+
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sodales senectus dictum arcu sit tristique donec eget.</p>
+
+                        <div class="menu-item_last">
+
+                            <h4 class="menu-item_last_price">300 ₽</h4>
+
+                            <div class="controls">
+                                <button class="add-btn" onclick="addItem(this, 'Рис с сердцечками', 300, 'assets/menu/lunch/rice.svg')">Добавить</button>
+                                <div class="counter" style="display: none;">
+                                    <button onclick="decrementItem(this, 'Рис с сердцечками', 300, 'assets/menu/lunch/rice.svg')">–</button>
+                                    <span>0</span>
+                                    <button onclick="incrementItem(this, 'Рис с сердцечками', 300, 'assets/menu/lunch/rice.svg')">+</button>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="menu-item" data-item="Макарошки" data-price="200">
+                        <img src="assets/menu/lunch/macaroni.svg" alt="Макарошки">
+                        <h3>Макарошки</h3>
+
+                        <div class="menu-item_rating">
+                            <img src="assets/logos/Star_1.svg" alt="">
+                            <img src="assets/logos/Star_1.svg" alt="">
+                            <img src="assets/logos/Star_1.svg" alt="">
+                            <img src="assets/logos/Star_1.svg" alt="">
+                            <img src="assets/logos/Star_1.svg" alt="">
+                        </div>
+
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sodales senectus dictum arcu sit tristique donec eget.</p>
+
+                        <div class="menu-item_last">
+
+                            <h4 class="menu-item_last_price">200 ₽</h4>
+
+                            <div class="controls">
+                                <button class="add-btn" onclick="addItem(this, 'Макарошки', 200, 'assets/menu/lunch/macaroni.svg')">Добавить</button>
+                                <div class="counter" style="display: none;">
+                                    <button onclick="decrementItem(this, 'Макарошки', 200, 'assets/menu/lunch/macaroni.svg')">–</button>
+                                    <span>0</span>
+                                    <button onclick="incrementItem(this, 'Макарошки', 200, 'assets/menu/lunch/macaroni.svg')">+</button>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- END OF LUNCH -->
+
+                <!-- DINNER -->
+
+                <div id="dinner" class="category">
+
+                    <div class="menu-item" data-item="Паста Карбонара" data-price="300">
+                        <img src="assets/menu/dinner/carbonara.svg" alt="Паста Карбонара">
+                        <h3>Паста Карбонара</h3>
+
+                        <div class="menu-item_rating">
+                            <img src="assets/logos/Star_1.svg" alt="">
+                            <img src="assets/logos/Star_1.svg" alt="">
+                            <img src="assets/logos/Star_1.svg" alt="">
+                            <img src="assets/logos/Star_1.svg" alt="">
+                            <img src="assets/logos/Star_1.svg" alt="">
+                        </div>
+
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sodales senectus dictum arcu sit tristique donec eget.</p>
+
+                        <div class="menu-item_last">
+
+                            <h4 class="menu-item_last_price">300 ₽</h4>
+
+                            <div class="controls">
+                                <button class="add-btn" onclick="addItem(this, 'Паста Карбонара', 300, 'assets/menu/dinner/carbonara.svg')">Добавить</button>
+                                <div class="counter" style="display: none;">
+                                    <button onclick="decrementItem(this, 'Паста Карбонара', 300, 'assets/menu/dinner/carbonara.svg')">–</button>
+                                    <span>0</span>
+                                    <button onclick="incrementItem(this, 'Паста Карбонара', 300, 'assets/menu/dinner/carbonara.svg')">+</button>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="menu-item" data-item="Карри с курицей" data-price="300">
+                        <img src="assets/menu/dinner/curry.svg" alt="Карри с курицей">
+                        <h3>Карри с курицей</h3>
+
+                        <div class="menu-item_rating">
+                            <img src="assets/logos/Star_1.svg" alt="">
+                            <img src="assets/logos/Star_1.svg" alt="">
+                            <img src="assets/logos/Star_1.svg" alt="">
+                            <img src="assets/logos/Star_1.svg" alt="">
+                            <img src="assets/logos/Star_1.svg" alt="">
+                        </div>
+
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sodales senectus dictum arcu sit tristique donec eget.</p>
+
+                        <div class="menu-item_last">
+
+                            <h4 class="menu-item_last_price">300 ₽</h4>
+
+                            <div class="controls">
+                                <button class="add-btn" onclick="addItem(this, 'Карри с курицей', 300, 'assets/menu/dinner/curry.svg')">Добавить</button>
+                                <div class="counter" style="display: none;">
+                                    <button onclick="decrementItem(this, 'Карри с курицей', 300, 'assets/menu/dinner/curry.svg')">–</button>
+                                    <span>0</span>
+                                    <button onclick="incrementItem(this, 'Карри с курицей', 300, 'assets/menu/dinner/curry.svg')">+</button>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="menu-item" data-item="Чили кон карне" data-price="350">
+                        <img src="assets/menu/dinner/chili_con_carne.svg" alt="Чили кон карне">
+                        <h3>Чили кон карне</h3>
+
+                        <div class="menu-item_rating">
+                            <img src="assets/logos/Star_1.svg" alt="">
+                            <img src="assets/logos/Star_1.svg" alt="">
+                            <img src="assets/logos/Star_1.svg" alt="">
+                            <img src="assets/logos/Star_1.svg" alt="">
+                            <img src="assets/logos/Star_1.svg" alt="">
+                        </div>
+
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sodales senectus dictum arcu sit tristique donec eget.</p>
+
+                        <div class="menu-item_last">
+
+                            <h4 class="menu-item_last_price">350 ₽</h4>
+
+                            <div class="controls">
+                                <button class="add-btn" onclick="addItem(this, 'Чили кон карне', 350, 'assets/menu/dinner/chili_con_carne.svg')">Добавить</button>
+                                <div class="counter" style="display: none;">
+                                    <button onclick="decrementItem(this, 'Чили кон карне', 350, 'assets/menu/dinner/chili_con_carne.svg')">–</button>
+                                    <span>0</span>
+                                    <button onclick="incrementItem(this, 'Чили кон карне', 350, 'assets/menu/dinner/chili_con_carne.svg')">+</button>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="menu-item" data-item="Шаверма" data-price="250">
+                        <img src="assets/menu/dinner/shawarma.svg" alt="Шаверма">
+                        <h3>Шаверма</h3>
+
+                        <div class="menu-item_rating">
+                            <img src="assets/logos/Star_1.svg" alt="">
+                            <img src="assets/logos/Star_1.svg" alt="">
+                            <img src="assets/logos/Star_1.svg" alt="">
+                            <img src="assets/logos/Star_1.svg" alt="">
+                            <img src="assets/logos/Star_1.svg" alt="">
+                        </div>
+
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sodales senectus dictum arcu sit tristique donec eget.</p>
+
+                        <div class="menu-item_last">
+
+                            <h4 class="menu-item_last_price">250 ₽</h4>
+
+                            <div class="controls">
+                                <button class="add-btn" onclick="addItem(this, 'Шаверма', 250, 'assets/menu/dinner/shawarma.svg')">Добавить</button>
+                                <div class="counter" style="display: none;">
+                                    <button onclick="decrementItem(this, 'Шаверма', 250, 'assets/menu/dinner/shawarma.svg')">–</button>
+                                    <span>0</span>
+                                    <button onclick="incrementItem(this, 'Шаверма', 250, 'assets/menu/dinner/shawarma.svg')">+</button>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="menu-item" data-item="Буррито" data-price="250">
+                        <img src="assets/menu/dinner/burrito.svg" alt="Буррито">
+                        <h3>Буррито</h3>
+
+                        <div class="menu-item_rating">
+                            <img src="assets/logos/Star_1.svg" alt="">
+                            <img src="assets/logos/Star_1.svg" alt="">
+                            <img src="assets/logos/Star_1.svg" alt="">
+                            <img src="assets/logos/Star_1.svg" alt="">
+                            <img src="assets/logos/Star_1.svg" alt="">
+                        </div>
+
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sodales senectus dictum arcu sit tristique donec eget.</p>
+
+                        <div class="menu-item_last">
+
+                            <h4 class="menu-item_last_price">250 ₽</h4>
+
+                            <div class="controls">
+                                <button class="add-btn" onclick="addItem(this, 'Буррито', 250, 'assets/menu/dinner/burrito.svg')">Добавить</button>
+                                <div class="counter" style="display: none;">
+                                    <button onclick="decrementItem(this, 'Буррито', 250, 'assets/menu/dinner/burrito.svg')">–</button>
+                                    <span>0</span>
+                                    <button onclick="incrementItem(this, 'Буррито', 250, 'assets/menu/dinner/burrito.svg')">+</button>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="menu-item" data-item="Гречка" data-price="200">
+                        <img src="assets/menu/dinner/porridg.svg" alt="Гречка">
+                        <h3>Гречка</h3>
+
+                        <div class="menu-item_rating">
+                            <img src="assets/logos/Star_1.svg" alt="">
+                            <img src="assets/logos/Star_1.svg" alt="">
+                            <img src="assets/logos/Star_1.svg" alt="">
+                            <img src="assets/logos/Star_1.svg" alt="">
+                            <img src="assets/logos/Star_1.svg" alt="">
+                        </div>
+
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sodales senectus dictum arcu sit tristique donec eget.</p>
+
+                        <div class="menu-item_last">
+
+                            <h4 class="menu-item_last_price">200 ₽</h4>
+
+                            <div class="controls">
+                                <button class="add-btn" onclick="addItem(this, 'Гречка', 200, 'assets/menu/dinner/porridg.svg')">Добавить</button>
+                                <div class="counter" style="display: none;">
+                                    <button onclick="decrementItem(this, 'Гречка', 200, 'assets/menu/dinner/porridg.svg')">–</button>
+                                    <span>0</span>
+                                    <button onclick="incrementItem(this, 'Гречка', 200, 'assets/menu/dinner/porridg.svg')">+</button>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- END OF DINNER -->
+
+                <!-- FASTFOOD -->
+
+                <div id="fastfood" class="category">
+
+                    <div class="menu-item" data-item="Фруктовая нарезка" data-price="150">
+                        <img src="assets/menu/fastfood/fruits.svg" alt="Фруктовая нарезка">
+                        <h3>Фруктовая нарезка</h3>
+
+                        <div class="menu-item_rating">
+                            <img src="assets/logos/Star_1.svg" alt="">
+                            <img src="assets/logos/Star_1.svg" alt="">
+                            <img src="assets/logos/Star_1.svg" alt="">
+                            <img src="assets/logos/Star_1.svg" alt="">
+                            <img src="assets/logos/Star_1.svg" alt="">
+                        </div>
+
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sodales senectus dictum arcu sit tristique donec eget.</p>
+
+                        <div class="menu-item_last">
+
+                            <h4 class="menu-item_last_price">150 ₽</h4>
+
+                            <div class="controls">
+                                <button class="add-btn" onclick="addItem(this, 'Фруктовая нарезка', 150, 'assets/menu/fastfood/fruits.svg')">Добавить</button>
+                                <div class="counter" style="display: none;">
+                                    <button onclick="decrementItem(this, 'Фруктовая нарезка', 150, 'assets/menu/fastfood/fruits.svg')">–</button>
+                                    <span>0</span>
+                                    <button onclick="incrementItem(this, 'Фруктовая нарезка', 150, 'assets/menu/fastfood/fruits.svg')">+</button>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="menu-item" data-item="Йогурт" data-price="70">
+                        <img src="assets/menu/fastfood/yoghurt.svg" alt="Йогурт">
+                        <h3>Йогурт</h3>
+
+                        <div class="menu-item_rating">
+                            <img src="assets/logos/Star_1.svg" alt="">
+                            <img src="assets/logos/Star_1.svg" alt="">
+                            <img src="assets/logos/Star_1.svg" alt="">
+                            <img src="assets/logos/Star_1.svg" alt="">
+                            <img src="assets/logos/Star_1.svg" alt="">
+                        </div>
+
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sodales senectus dictum arcu sit tristique donec eget.</p>
+
+                        <div class="menu-item_last">
+
+                            <h4 class="menu-item_last_price">70 ₽</h4>
+
+                            <div class="controls">
+                                <button class="add-btn" onclick="addItem(this, 'Йогурт', 70, 'assets/menu/fastfood/yoghurt.svg')">Добавить</button>
+                                <div class="counter" style="display: none;">
+                                    <button onclick="decrementItem(this, 'Йогурт', 70, 'assets/menu/fastfood/yoghurt.svg')">–</button>
+                                    <span>0</span>
+                                    <button onclick="incrementItem(this, 'Йогурт', 70, 'assets/menu/fastfood/yoghurt.svg')">+</button>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="menu-item" data-item="Сэндвич" data-price="200">
+                        <img src="assets/menu/fastfood/sandwich.svg" alt="Сэндвич">
+                        <h3>Сэндвич</h3>
+
+                        <div class="menu-item_rating">
+                            <img src="assets/logos/Star_1.svg" alt="">
+                            <img src="assets/logos/Star_1.svg" alt="">
+                            <img src="assets/logos/Star_1.svg" alt="">
+                            <img src="assets/logos/Star_1.svg" alt="">
+                            <img src="assets/logos/Star_1.svg" alt="">
+                        </div>
+
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sodales senectus dictum arcu sit tristique donec eget.</p>
+
+                        <div class="menu-item_last">
+
+                            <h4 class="menu-item_last_price">200 ₽</h4>
+
+                            <div class="controls">
+                                <button class="add-btn" onclick="addItem(this, 'Сэндвич', 200, 'assets/menu/fastfood/sandwich.svg')">Добавить</button>
+                                <div class="counter" style="display: none;">
+                                    <button onclick="decrementItem(this, 'Сэндвич', 200, 'assets/menu/fastfood/sandwich.svg')">–</button>
+                                    <span>0</span>
+                                    <button onclick="incrementItem(this, 'Сэндвич', 200, 'assets/menu/fastfood/sandwich.svg')">+</button>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="menu-item" data-item="Чипсы" data-price="150">
+                        <img src="assets/menu/fastfood/chips.svg" alt="Чипсы">
+                        <h3>Чипсы</h3>
+
+                        <div class="menu-item_rating">
+                            <img src="assets/logos/Star_1.svg" alt="">
+                            <img src="assets/logos/Star_1.svg" alt="">
+                            <img src="assets/logos/Star_1.svg" alt="">
+                            <img src="assets/logos/Star_1.svg" alt="">
+                            <img src="assets/logos/Star_1.svg" alt="">
+                        </div>
+
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sodales senectus dictum arcu sit tristique donec eget.</p>
+
+                        <div class="menu-item_last">
+
+                            <h4 class="menu-item_last_price">150 ₽</h4>
+
+                            <div class="controls">
+                                <button class="add-btn" onclick="addItem(this, 'Чипсы', 150, 'assets/menu/fastfood/chips.svg')">Добавить</button>
+                                <div class="counter" style="display: none;">
+                                    <button onclick="decrementItem(this, 'Чипсы', 150, 'assets/menu/fastfood/chips.svg')">–</button>
+                                    <span>0</span>
+                                    <button onclick="incrementItem(this, 'Чипсы', 150, 'assets/menu/fastfood/chips.svg')">+</button>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="menu-item" data-item="Тост с гуакамоле" data-price="200">
+                        <img src="assets/menu/fastfood/guacamole.svg" alt="Тост с гуакамоле">
+                        <h3>Тост с гуакамоле</h3>
+
+                        <div class="menu-item_rating">
+                            <img src="assets/logos/Star_1.svg" alt="">
+                            <img src="assets/logos/Star_1.svg" alt="">
+                            <img src="assets/logos/Star_1.svg" alt="">
+                            <img src="assets/logos/Star_1.svg" alt="">
+                            <img src="assets/logos/Star_1.svg" alt="">
+                        </div>
+
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sodales senectus dictum arcu sit tristique donec eget.</p>
+
+                        <div class="menu-item_last">
+
+                            <h4 class="menu-item_last_price">200 ₽</h4>
+
+                            <div class="controls">
+                                <button class="add-btn" onclick="addItem(this, 'Тост с гуакамоле', 200, 'assets/menu/fastfood/guacamole.svg')">Добавить</button>
+                                <div class="counter" style="display: none;">
+                                    <button onclick="decrementItem(this, 'Тост с гуакамоле', 200, 'assets/menu/fastfood/guacamole.svg')">–</button>
+                                    <span>0</span>
+                                    <button onclick="incrementItem(this, 'Тост с гуакамоле', 200, 'assets/menu/fastfood/guacamole.svg')">+</button>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="menu-item" data-item="Огурцы по-польски" data-price="150">
+                        <img src="assets/menu/fastfood/pickles.svg" alt="Огурцы по-польски">
+                        <h3>Огурцы по-польски</h3>
+
+                        <div class="menu-item_rating">
+                            <img src="assets/logos/Star_1.svg" alt="">
+                            <img src="assets/logos/Star_1.svg" alt="">
+                            <img src="assets/logos/Star_1.svg" alt="">
+                            <img src="assets/logos/Star_1.svg" alt="">
+                            <img src="assets/logos/Star_1.svg" alt="">
+                        </div>
+
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sodales senectus dictum arcu sit tristique donec eget.</p>
+
+                        <div class="menu-item_last">
+
+                            <h4 class="menu-item_last_price">150 ₽</h4>
+
+                            <div class="controls">
+                                <button class="add-btn" onclick="addItem(this, 'Огурцы по-польски', 150, 'assets/menu/fastfood/pickles.svg')">Добавить</button>
+                                <div class="counter" style="display: none;">
+                                    <button onclick="decrementItem(this, 'Огурцы по-польски', 150, 'assets/menu/fastfood/pickles.svg')">–</button>
+                                    <span>0</span>
+                                    <button onclick="incrementItem(this, 'Огурцы по-польски', 150, 'assets/menu/fastfood/pickles.svg')">+</button>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- END OF FASTFOOD -->
+
+                <!-- DRINKS -->
+
+                <div id="drinks" class="category">
+
+                    <div class="menu-item" data-item="Чай" data-price="50">
+                        <img src="assets/menu/drinks/tea.svg" alt="Чай">
+                        <h3>Чай</h3>
+
+                        <div class="menu-item_rating">
+                            <img src="assets/logos/Star_1.svg" alt="">
+                            <img src="assets/logos/Star_1.svg" alt="">
+                            <img src="assets/logos/Star_1.svg" alt="">
+                            <img src="assets/logos/Star_1.svg" alt="">
+                            <img src="assets/logos/Star_1.svg" alt="">
+                        </div>
+
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sodales senectus dictum arcu sit tristique donec eget.</p>
+
+                        <div class="menu-item_last">
+
+                            <h4 class="menu-item_last_price">50 ₽</h4>
+
+                            <div class="controls">
+                                <button class="add-btn" onclick="addItem(this, 'Чай', 50, 'assets/menu/drinks/tea.svg')">Добавить</button>
+                                <div class="counter" style="display: none;">
+                                    <button onclick="decrementItem(this, 'Чай', 50, 'assets/menu/drinks/tea.svg')">–</button>
+                                    <span>0</span>
+                                    <button onclick="incrementItem(this, 'Чай', 50, 'assets/menu/drinks/tea.svg')">+</button>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="menu-item" data-item="Кофе" data-price="150">
+                        <img src="assets/menu/drinks/coffee.svg" alt="Кофе">
+                        <h3>Кофе</h3>
+
+                        <div class="menu-item_rating">
+                            <img src="assets/logos/Star_1.svg" alt="">
+                            <img src="assets/logos/Star_1.svg" alt="">
+                            <img src="assets/logos/Star_1.svg" alt="">
+                            <img src="assets/logos/Star_1.svg" alt="">
+                            <img src="assets/logos/Star_1.svg" alt="">
+                        </div>
+
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sodales senectus dictum arcu sit tristique donec eget.</p>
+
+                        <div class="menu-item_last">
+
+                            <h4 class="menu-item_last_price">150 ₽</h4>
+
+                            <div class="controls">
+                                <button class="add-btn" onclick="addItem(this, 'Кофе', 150, 'assets/menu/drinks/coffee.svg')">Добавить</button>
+                                <div class="counter" style="display: none;">
+                                    <button onclick="decrementItem(this, 'Кофе', 150, 'assets/menu/drinks/coffee.svg')">–</button>
+                                    <span>0</span>
+                                    <button onclick="incrementItem(this, 'Кофе', 150, 'assets/menu/drinks/coffee.svg')">+</button>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="menu-item" data-item="Апельсиновый сок" data-price="70">
+                        <img src="assets/menu/drinks/juice.svg" alt="Апельсиновый сок">
+                        <h3>Апельсиновый сок</h3>
+
+                        <div class="menu-item_rating">
+                            <img src="assets/logos/Star_1.svg" alt="">
+                            <img src="assets/logos/Star_1.svg" alt="">
+                            <img src="assets/logos/Star_1.svg" alt="">
+                            <img src="assets/logos/Star_1.svg" alt="">
+                            <img src="assets/logos/Star_1.svg" alt="">
+                        </div>
+
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sodales senectus dictum arcu sit tristique donec eget.</p>
+
+                        <div class="menu-item_last">
+
+                            <h4 class="menu-item_last_price">70 ₽</h4>
+
+                            <div class="controls">
+                                <button class="add-btn" onclick="addItem(this, 'Апельсиновый сок', 70, 'assets/menu/drinks/juice.svg')">Добавить</button>
+                                <div class="counter" style="display: none;">
+                                    <button onclick="decrementItem(this, 'Апельсиновый сок', 70, 'assets/menu/drinks/juice.svg')">–</button>
+                                    <span>0</span>
+                                    <button onclick="incrementItem(this, 'Апельсиновый сок', 70, 'assets/menu/drinks/juice.svg')">+</button>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="menu-item" data-item="Кола" data-price="80">
+                        <img src="assets/menu/drinks/cola.svg" alt="Кола">
+                        <h3>Кола</h3>
+
+                        <div class="menu-item_rating">
+                            <img src="assets/logos/Star_1.svg" alt="">
+                            <img src="assets/logos/Star_1.svg" alt="">
+                            <img src="assets/logos/Star_1.svg" alt="">
+                            <img src="assets/logos/Star_1.svg" alt="">
+                            <img src="assets/logos/Star_1.svg" alt="">
+                        </div>
+
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sodales senectus dictum arcu sit tristique donec eget.</p>
+
+                        <div class="menu-item_last">
+
+                            <h4 class="menu-item_last_price">80 ₽</h4>
+
+                            <div class="controls">
+                                <button class="add-btn" onclick="addItem(this, 'Кола', 80, 'assets/menu/drinks/cola.svg')">Добавить</button>
+                                <div class="counter" style="display: none;">
+                                    <button onclick="decrementItem(this, 'Кола', 80, 'assets/menu/drinks/cola.svg')">–</button>
+                                    <span>0</span>
+                                    <button onclick="incrementItem(this, 'Кола', 80, 'assets/menu/drinks/cola.svg')">+</button>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="menu-item" data-item="Пиво" data-price="100">
+                        <img src="assets/menu/drinks/beer.svg" alt="Пиво">
+                        <h3>Пиво</h3>
+
+                        <div class="menu-item_rating">
+                            <img src="assets/logos/Star_1.svg" alt="">
+                            <img src="assets/logos/Star_1.svg" alt="">
+                            <img src="assets/logos/Star_1.svg" alt="">
+                            <img src="assets/logos/Star_1.svg" alt="">
+                            <img src="assets/logos/Star_1.svg" alt="">
+                        </div>
+
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sodales senectus dictum arcu sit tristique donec eget.</p>
+
+                        <div class="menu-item_last">
+
+                            <h4 class="menu-item_last_price">100 ₽</h4>
+
+                            <div class="controls">
+                                <button class="add-btn" onclick="addItem(this, 'Пиво', 100, 'assets/menu/drinks/beer.svg')">Добавить</button>
+                                <div class="counter" style="display: none;">
+                                    <button onclick="decrementItem(this, 'Пиво', 100, 'assets/menu/drinks/beer.svg')">–</button>
+                                    <span>0</span>
+                                    <button onclick="incrementItem(this, 'Пиво', 100, 'assets/menu/drinks/beer.svg')">+</button>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="menu-item" data-item="Винишко" data-price="400">
+                        <img src="assets/menu/drinks/wine.svg" alt="Винишко">
+                        <h3>Винишко</h3>
+
+                        <div class="menu-item_rating">
+                            <img src="assets/logos/Star_1.svg" alt="">
+                            <img src="assets/logos/Star_1.svg" alt="">
+                            <img src="assets/logos/Star_1.svg" alt="">
+                            <img src="assets/logos/Star_1.svg" alt="">
+                            <img src="assets/logos/Star_1.svg" alt="">
+                        </div>
+
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sodales senectus dictum arcu sit tristique donec eget.</p>
+
+                        <div class="menu-item_last">
+
+                            <h4 class="menu-item_last_price">400 ₽</h4>
+
+                            <div class="controls">
+                                <button class="add-btn" onclick="addItem(this, 'Винишко', 400, 'assets/menu/drinks/wine.svg')">Добавить</button>
+                                <div class="counter" style="display: none;">
+                                    <button onclick="decrementItem(this, 'Винишко', 400, 'assets/menu/drinks/wine.svg')">–</button>
+                                    <span>0</span>
+                                    <button onclick="incrementItem(this, 'Винишко', 400, 'assets/menu/drinks/wine.svg')">+</button>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- END OF DRINKS -->
+            </div>
+        </div>
+    <!-- END OF MENU -->
+
+    <!-- CONTACT US -->
+
+    <!-- <div id="contact" class="page">
+        <div class="container">
+            <h2>Наш шеф-повар</h2>
+            <div class="chefs-inner">
+
+                <div class="chef-item">
+
+                    <img src="assets/chef/chef.png" alt="">
+
+                    <h3>Димка</h3>
+
+                    <p>Главный шеф-повар</p>
+
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <p>&copy; 2024 Dimka's Nyamkas. All rights reserved.</p>
+            <a href="tel:+79950903844" class="header-top_phone">
+                <span>+7(995)090-38-44</span>
+            </a>
+        </footer>
+    </div> -->
+
+    <!-- END OF CONTACT US -->
+
+
+    <!-- ORDER -->
+    <div id="order" class="page">
+        <div class="container">
+            <h2>Ваш заказ</h2>
+            <div class="order-summary">
+                <ul class="order-list" id="order-list"></ul>
+            </div>
+
+            <div class="summary">
+                <p><strong>Итого:</strong> <span id="total-price">0</span> ₽</p>
+
+                <button class="clear" onclick="clearCart()">Очистить корзину</button>
+
+            </div>
+        </div>
+    </div>
+    <!-- END OF ORDER -->
+
+    <script src="script.js"></script>
+
+</body>
+</html>
