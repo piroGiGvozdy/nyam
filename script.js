@@ -254,23 +254,12 @@ function clearCart() {
     });
 }
 
-// document.addEventListener('DOMContentLoaded', () => {
-//     const menuToggle = document.querySelector('.menu-toggle');
-//     const headerButtons = document.querySelector('.header-buttons');
+vkBridge.send('VKWebAppInit');
 
-//     menuToggle.addEventListener('click', () => {
-//         headerButtons.classList.toggle('active'); // Показываем/скрываем кнопки
+vkBridge.send('VKWebAppGetUserInfo').then((user) => {
+  console.log(user);
+});
 
-//         // Дополнительная проверка на позиционирование
-//         const rect = headerButtons.getBoundingClientRect();
-//         if (rect.right > window.innerWidth) {
-//             headerButtons.style.left = `${window.innerWidth - rect.width}px`; // Подгоняем вправо
-//         }
-//         if (rect.left < 0) {
-//             headerButtons.style.left = '0'; // Подгоняем влево
-//         }
-//     });
-// });
 
 
 
