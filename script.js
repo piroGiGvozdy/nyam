@@ -1,10 +1,11 @@
-import bridge from '@vkontakte/vk-bridge';
+import vkBridge from './node_modules/@vkontakte/vk-bridge';
+console.log(typeof vkBridge); // Ожидается "object"
 
-bridge.send('VKWebAppInit');
+console.log('VKWebAppInit is being called...');
+vkBridge.send('VKWebAppInit')
+  .then(() => console.log('VKWebAppInit successfully initialized!'))
+  .catch((error) => console.error('Error initializing VKWebAppInit:', error));
 
-bridge.send('VKWebAppGetUserInfo').then((userInfo) => {
-  console.log(userInfo); // Информация о пользователе
-});
 
 const cartLink = document.getElementById("cart-link");
 
