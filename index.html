@@ -1102,6 +1102,13 @@
         tg.expand();
         let order_send = document.getElementById("order_send");
         order_send.addEventListener("click", () => {
+            let name = tg.initDataUnsafe.user.first_name;
+
+            let data = {
+                name: name
+            };
+            tg.sendData(JSON.stringify(data));
+
             tg.close();
         });
     </script>
