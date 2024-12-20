@@ -308,7 +308,7 @@ nav a:hover
 
 .menu-item button {
     background-color: var(--tg-theme-button-color);
-    /* color: white; */
+    color: var(--tg-theme-button-text-color);
     border: none;
     padding: 11px 36px;
     border-radius: 162px;
@@ -318,7 +318,7 @@ nav a:hover
 }
 
 .menu-item button:hover {
-    background-color: var(--orange);
+    background-color: var(--tg-theme-button-color);
     transform: scale(1.05);
 }
 
@@ -333,7 +333,7 @@ nav a:hover
 
     justify-content: center;
     background-color: var(--tg-theme-button-color);
-    /* color: white; */
+    color: var(--tg-theme-button-text-color);
     border: none;
     padding: 6px 10px;
     border-radius: 50%;
