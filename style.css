@@ -494,6 +494,32 @@ footer {
     transform: scale(1.05);
 }
 
+.order-send {
+    /* position: relative; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 25px;
+    width: 100%; 
+}
+
+.order-send button {
+    background-color: var(--orange);
+    font-size: 20px;
+    color: white;
+    border: none;
+    padding: 11px 41px;
+    border-radius: 162px;
+    cursor: pointer;
+
+    transition: all .3s ease; 
+}
+
+.order-send button:hover{
+    background-color: var(--green);
+    transform: scale(1.05);
+}
+
 /* END OF ORDER */
 
 

@@ -16,8 +16,6 @@
     <link rel="stylesheet" href="./style.css">
 
     <title>Dimka's Nyamkas</title>
-
-    <script src="https://unpkg.com/@vkontakte/vk-bridge/dist/browser.min.js"></script>
 </head>
 <body>
     
@@ -1088,16 +1086,17 @@
                 <button class="clear" onclick="clearCart()">Очистить корзину</button>
 
             </div>
+
+            <div class="order-send">
+                <button id="order-send">Оформить заказ</button>
+            </div>
         </div>
     </div>
     <!-- END OF ORDER --> 
 
-    <script>
-        vkBridge.send('VKWebAppInit')
-          .then(() => console.log('VK Bridge initialized'))
-          .catch((error) => console.error('VK Bridge initialization failed:', error));
-    </script>
+
     <script src="./script.js" defer></script>
+    <script src="https://telegram.org/js/telegram-web-app.js?56"></script>
 
 </body>
 </html>

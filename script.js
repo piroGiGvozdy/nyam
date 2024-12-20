@@ -1,3 +1,9 @@
+let tg = window.Telegram.WebApp;
+let order_send = getElementById('order-send');
+order_send.addEventListener("click", () => {
+    tg.close();
+});
+
 
 const cartLink = document.getElementById("cart-link");
 
