@@ -93,7 +93,7 @@ nav a
 {
     text-decoration: none;
     margin-right: 45px;
-    /* color: var(--black); */
+    color: var(--tg-theme-text-color);
     display: inline-block;
 
     transition: all .3s ease;
@@ -156,7 +156,7 @@ nav a:hover
 {
     line-height: 200%;
     margin-bottom: 77px;
-    color: var(--black);
+    /* color: var(--black); */
 }
 
 .main-content_buttons a
