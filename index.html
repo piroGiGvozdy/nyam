@@ -1122,8 +1122,10 @@
 
         total.addEventListener("click", () => {
             let name = document.getElementById("user_name").value;
+            let price = document.getElementById('total-price').value;
             let data = {
-                name: name
+                name: name,
+                price: price
             };
             tg.sendData(JSON.stringify(data));
 
