@@ -211,7 +211,7 @@ nav a:hover
 .menu-buttons a
 {
     background-color: var(--tg-theme-section-bg-color);
-    /* color: var(--black); */
+    color: var(--tg-theme-text-color);
     text-decoration: none;
     padding: 17px 64px;
     border-radius: 162px;
