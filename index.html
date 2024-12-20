@@ -1099,16 +1099,10 @@
     <script src="https://telegram.org/js/telegram-web-app.js?56"></script>
     <script>
         let tg = window.Telegram.WebApp;
+        tg.expand();
         let order_send = document.getElementById("order_send");
         order_send.addEventListener("click", () => {
-        if(tg) 
-        {
             tg.close();
-        }
-        else
-        {
-            console.error("TG API is not defined");
-        }
         });
     </script>
 
