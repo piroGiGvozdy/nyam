@@ -307,8 +307,8 @@ nav a:hover
 }
 
 .menu-item button {
-    background-color: var(--green);
-    color: white;
+    background-color: var(--tg-theme-button-color);
+    /* color: white; */
     border: none;
     padding: 11px 36px;
     border-radius: 162px;
@@ -332,8 +332,8 @@ nav a:hover
 .counter button {
 
     justify-content: center;
-    background-color: var(--green);
-    color: white;
+    background-color: var(--tg-theme-button-color);
+    /* color: white; */
     border: none;
     padding: 6px 10px;
     border-radius: 50%;
