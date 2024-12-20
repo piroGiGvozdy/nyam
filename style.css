@@ -162,9 +162,9 @@ nav a:hover
 .main-content_buttons a
 {
     padding: 17px 62px;
-    background-color: var(--green);
+    background-color: var(--tg-theme-button-color);
+    color: var(--tg-theme-button-text-color);
     border-radius: 162px;
-    color: #fff;
     text-decoration: none;
     margin-right: 23px;
     display: inline-block;
@@ -477,9 +477,9 @@ footer {
 
 .clear {
 
-    background-color: var(--green);
+    background-color: var(--tg-theme-button-color);
+    color: var(--tg-theme-button-text-color);
     font-size: 20px;
-    color: white;
     border: none;
     padding: 11px 36px;
     border-radius: 162px;
@@ -613,8 +613,8 @@ footer {
     .main-content_buttons a {
         margin: 0 auto;
         padding: 10px 20px;
-        background-color: var(--green);
-        color: white;
+        background-color: var(--tg-theme-button-color);
+        color: var(--tg-theme-button-text-color);
         border: none;
         border-radius: 50px;
         cursor: pointer;
