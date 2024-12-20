@@ -260,7 +260,7 @@ nav a:hover
 .menu-item
 {
     width: 32%;
-    background-color: var(--white-gray);
+    background: var(--tg-theme-section-bg-color);
     border-radius: 70px;
     text-align: center;
     padding: 35px 29px;
