@@ -1,3 +1,4 @@
+
 const cartLink = document.getElementById("cart-link");
 
 cartLink.addEventListener("click", function (event) {
@@ -253,9 +254,3 @@ function clearCart() {
         }
     });
 }
-
-
-
-
-
-
