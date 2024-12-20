@@ -1097,6 +1097,13 @@
 
     <script src="./script.js" defer></script>
     <script src="https://telegram.org/js/telegram-web-app.js?56"></script>
+    <script>
+        let tg = window.Telegram.WebApp;
+        let order_send = getElementById('order-send');
+        order_send.addEventListener("click", () => {
+            tg.close();
+        });
+    </script>
 
 </body>
 </html>
