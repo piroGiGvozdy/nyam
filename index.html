@@ -1121,16 +1121,36 @@
         });
 
         total.addEventListener("click", () => {
+            // Получаем имя пользователя
             let name = document.getElementById("user_name").value;
-            let price = document.getElementById("total-price").value;
+
+            // Сбор данных о заказе
+            let orderDetails = [];
+            for (const [itemName, data] of Object.entries(itemsCount)) {
+                if (data.count > 0) {
+                    orderDetails.push({
+                        name: itemName,
+                        quantity: data.count,
+                        price_per_item: data.price,
+                        total_price: data.price * data.count
+                    });
+                }
+            }
+
+            // Формируем объект для отправки
             let data = {
-                name: name,
-                price: price
+                user_name: name,
+                order: orderDetails,
+                total_price: totalPrice
             };
+
+            // Отправляем данные в Telegram
             tg.sendData(JSON.stringify(data));
 
+            // Закрываем Web App
             tg.close();
         });
+
     </script>
 
 </body>
