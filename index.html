@@ -1088,7 +1088,7 @@
             </div>
 
             <div class="order-send">
-                <button id="order-send">Оформить заказ</button>
+                <button id="order_send">Оформить заказ</button>
             </div>
         </div>
     </div>
@@ -1099,9 +1099,16 @@
     <script src="https://telegram.org/js/telegram-web-app.js?56"></script>
     <script>
         let tg = window.Telegram.WebApp;
-        let order_send = document.getElementById("order-send");
+        let order_send = document.getElementById("order_send");
         order_send.addEventListener("click", () => {
+        if(tg) 
+        {
             tg.close();
+        }
+        else
+        {
+            console.error("TG API is not defined");
+        }
         });
     </script>
 
