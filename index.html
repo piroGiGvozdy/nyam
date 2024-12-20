@@ -20,7 +20,7 @@
 <body>
     
     <!-- HEADER -->
-        <header>
+        <header id="header">
 
             <div class="container">
 
@@ -1094,6 +1094,14 @@
     </div>
     <!-- END OF ORDER --> 
 
+    <div class="container">
+        <p id="enter_name" class="enter_name">Введите имя</p>
+        <form id="form">
+            <input type="text" placeholder="Имя пользователя" id="user_name">
+            <button id="total" class="total_button">Заказать</button>
+        </form>
+    </div>
+
 
     <script src="./script.js" defer></script>
     <script src="https://telegram.org/js/telegram-web-app.js?56"></script>
@@ -1101,9 +1109,19 @@
         let tg = window.Telegram.WebApp;
         tg.expand();
         let order_send = document.getElementById("order_send");
-        order_send.addEventListener("click", () => {
-            let name = tg.initDataUnsafe.user.first_name;
+        let total = document.getElementById("total");
 
+        order_send.addEventListener("click", () => {
+            document.getElementById("enter_name").style.display = "block";
+            document.getElementById("form").style.display = "block";
+            document.getElementById("header").style.display = "none";
+            document.getElementById("order").style.display = "none";
+
+            document.getElementById("user_name").value = tg.initDataUnsafe.user.first_name;
+        });
+
+        total.addEventListener("click", () => {
+            let name = document.getElementById("user_name").value;
             let data = {
                 name: name
             };
