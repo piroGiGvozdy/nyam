@@ -356,56 +356,6 @@ nav a:hover
 
 /* END OF MENU */
 
-/* CONTACT US */
-
-.chefs-inner
-{
-    display: flex;
-    justify-content: center;
-    margin-bottom: 150px;
-}
-
-.chef-item
-{
-    text-align: center;
-}
-
-.chef-item h3
-{
-    margin-top: 40px;
-    margin-bottom: 30px;
-    font-size: 25px;
-    font-weight: 600;
-    color: var(--black);
-}
-
-.chef-item p
-{
-    color: #A08D76;
-    line-height: 200%;
-
-}
-
-footer {
-    /* background-color: #333;
-    color: #fff; */
-    text-align: center;
-    padding: 10px 0;
-    position:static;
-    bottom: 0;
-    width: 100%;
-    font-size: 14px;
-}
-
-.header-top_phone
-{
-    color: black;
-    align-items: center;
-    text-decoration: none;
-}
-
-/* END OF CONACT US */
-
 .page {
     display: none;
 }
@@ -759,53 +709,6 @@ footer {
         padding: 11px 36px;
         text-align: center;
     }
-
-    /* FORM */
-    #form {
-        display: none;
-        text-align: center;
-    }
-
-    .enter_name {
-        display: none;
-        position: absolute;
-        top: 190px;
-        left: 115px;
-        font-size: 24px;
-    }
-
-    input {
-        width: 80%;
-        outline: none;
-        /* margin: 10px 5%; */
-        padding: 8px 10px;
-        font-size: 16px;
-        border: 2px solid silver;
-        border-radius: 10px;
-        position: absolute;
-        top: 250px;
-        left: 40px;
-    }
-
-    input:focus {
-        border-color: var(--orange);
-    }
-
-    .total_button {
-        align-items: center;
-        background-color: var(--green);
-        font-size: 20px;
-        color: white;
-        border: none;
-        padding: 5px 20px;
-        border-radius: 162px;
-        /* margin-top: 20px; */
-        position: absolute;
-        top: 300px;
-        left: 130px;
-
-    }
-    /* END OF FORM */
 }
 
 

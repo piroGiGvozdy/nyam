@@ -1042,36 +1042,6 @@
         </div>
     <!-- END OF MENU -->
 
-    <!-- CONTACT US -->
-
-    <!-- <div id="contact" class="page">
-        <div class="container">
-            <h2>Наш шеф-повар</h2>
-            <div class="chefs-inner">
-
-                <div class="chef-item">
-
-                    <img src="assets/chef/chef.png" alt="">
-
-                    <h3>Димка</h3>
-
-                    <p>Главный шеф-повар</p>
-
-                </div>
-            </div>
-        </div>
-
-        <footer>
-            <p>&copy; 2024 Dimka's Nyamkas. All rights reserved.</p>
-            <a href="tel:+79950903844" class="header-top_phone">
-                <span>+7(995)090-38-44</span>
-            </a>
-        </footer>
-    </div> -->
-
-    <!-- END OF CONTACT US -->
-
-
     <!-- ORDER -->
     <div id="order" class="page">
         <div class="container">
@@ -1092,15 +1062,7 @@
             </div>
         </div>
     </div>
-    <!-- END OF ORDER --> 
-
-    <div class="container">
-        <p id="enter_name" class="enter_name">Введите имя</p>
-        <form id="form">
-            <input type="text" placeholder="Имя пользователя" id="user_name">
-            <button id="total" class="total_button">Заказать</button>
-        </form>
-    </div>
+    <!-- END OF ORDER -->
 
 
     <script src="./script.js" defer></script>
@@ -1109,27 +1071,12 @@
         let tg = window.Telegram.WebApp;
         tg.expand();
         let order_send = document.getElementById("order_send");
-        let total = document.getElementById("total");
 
         order_send.addEventListener("click", () => {
-            document.getElementById("enter_name").style.display = "block";
-            document.getElementById("form").style.display = "block";
-            document.getElementById("header").style.display = "none";
-            document.getElementById("order").style.display = "none";
-
-            document.getElementById("user_name").value = tg.initDataUnsafe.user.first_name;
-        });
-
-        total.addEventListener("click", () => {
-            // Получаем имя пользователя
-            let name = document.getElementById("user_name").value;
-
-            // Сбор данных о заказе
             let orderDetails = [];
             for (const [itemName, data] of Object.entries(itemsCount)) {
                 if (data.count > 0) {
                     orderDetails.push({
-                        name: itemName,
                         quantity: data.count,
                         price_per_item: data.price,
                         total_price: data.price * data.count
@@ -1137,20 +1084,16 @@
                 }
             }
 
-            // Формируем объект для отправки
             let data = {
                 user_name: name,
                 order: orderDetails,
                 total_price: totalPrice
             };
 
-            // Отправляем данные в Telegram
             tg.sendData(JSON.stringify(data));
 
-            // Закрываем Web App
             tg.close();
         });
-
     </script>
 
 </body>
