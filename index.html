@@ -1077,6 +1077,7 @@
             for (const [itemName, data] of Object.entries(itemsCount)) {
                 if (data.count > 0) {
                     orderDetails.push({
+                        name: itemName,
                         quantity: data.count,
                         price_per_item: data.price,
                         total_price: data.price * data.count
@@ -1085,7 +1086,6 @@
             }
 
             let data = {
-                user_name: name,
                 order: orderDetails,
                 total_price: totalPrice
             };
